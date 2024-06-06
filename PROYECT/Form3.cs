@@ -19,17 +19,10 @@ namespace PROYECT
 
         }
 
-        private void btnopenfile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
 
         private void btnsave_Click(object sender, EventArgs e)
         {
@@ -51,8 +44,6 @@ namespace PROYECT
                 MessageBox.Show("No file loaded to save.");
             }
         }
-
-
 
         private void btnopenfile_Click_1(object sender, EventArgs e)
         {

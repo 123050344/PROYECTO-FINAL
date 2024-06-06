@@ -11,6 +11,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
 
+
 namespace PROYECT
 {
     public partial class Form4 : Form
@@ -33,23 +34,23 @@ namespace PROYECT
         {
             try
             {
-               
+
                 string labelContent = lblnamefinal.Text;
                 string textboxContent = txtfinalnote.Text;
 
-               
+
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string filePath = Path.Combine(desktopPath, "Recipe.docx");
 
-               
+
                 using (WordprocessingDocument wordDocument = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
                 {
-                   
+
                     MainDocumentPart mainPart = wordDocument.AddMainDocumentPart();
                     mainPart.Document = new Document();
                     Body body = mainPart.Document.AppendChild(new Body());
 
-                  
+
                     Paragraph paraLabel = body.AppendChild(new Paragraph());
                     Run runLabel = paraLabel.AppendChild(new Run());
                     runLabel.AppendChild(new Text("" + labelContent));
@@ -64,7 +65,7 @@ namespace PROYECT
                         itemRun.AppendChild(new Text(item.Text));
                     }
 
-                   
+
                     Paragraph paraTextBox = body.AppendChild(new Paragraph());
                     Run runTextBox = paraTextBox.AppendChild(new Run());
                     runTextBox.AppendChild(new Text("" + textboxContent));
@@ -84,7 +85,7 @@ namespace PROYECT
         {
             try
             {
-                
+
                 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
                 string labelContent = lblnamefinal.Text;
@@ -93,17 +94,17 @@ namespace PROYECT
                 string thePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string filePath = Path.Combine(thePath, "Recipe.xlsx");
 
-               
+
                 using (var package = new ExcelPackage())
                 {
-                   
+
                     var worksheet = package.Workbook.Worksheets.Add("my recipe");
 
-                
+
                     worksheet.Cells["A1"].Value = "Name";
                     worksheet.Cells["B1"].Value = labelContent;
 
-                   
+
                     worksheet.Cells["A2"].Value = "Ingredients";
                     worksheet.Cells["B2"].Value = "Quantity";
 
@@ -122,11 +123,11 @@ namespace PROYECT
                         }
                     }
 
-                    
+
                     worksheet.Cells["A" + row].Value = "Preparation";
                     worksheet.Cells["B" + row].Value = textboxContent;
 
-                
+
                     FileInfo fileInfo = new FileInfo(filePath);
                     package.SaveAs(fileInfo);
                 }
@@ -143,23 +144,23 @@ namespace PROYECT
         {
             try
             {
-               
+
                 string labelContent = lblnamefinal.Text;
                 string textboxContent = txtfinalnote.Text;
 
-              
+
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string filePath = Path.Combine(desktopPath, "Recipe.txt");
 
-          
+
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
-                   
+
                     writer.WriteLine("Name:");
                     writer.WriteLine(labelContent);
                     writer.WriteLine();
 
-                  
+
                     writer.WriteLine("Ingredients\tQuantity");
                     foreach (ListViewItem item in lstrecipefinal.Items)
                     {
@@ -249,7 +250,7 @@ namespace PROYECT
             {
                 string labelText = lblnamefinal.Text;
 
-              
+
                 List<string> listViewItems = new List<string>();
                 foreach (ListViewItem item in lstrecipefinal.Items)
                 {
@@ -258,7 +259,7 @@ namespace PROYECT
 
                 string textBoxText = txtfinalnote.Text;
 
-               
+
                 var dataToExport = new
                 {
                     LabelText = labelText,
@@ -268,13 +269,13 @@ namespace PROYECT
 
                 string json = JsonConvert.SerializeObject(dataToExport, Formatting.Indented);
 
-                
+
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-               
+
                 string filePath = Path.Combine(desktopPath, "exportedData.json");
 
-             
+
                 File.WriteAllText(filePath, json);
 
                 MessageBox.Show("Data exported to JSON correctly", "Successful Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -285,13 +286,11 @@ namespace PROYECT
             }
         }
 
-
         private void Form4_Load(object sender, EventArgs e)
         {
 
         }
 
-        
     }
 }
 

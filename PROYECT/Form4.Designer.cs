@@ -82,7 +82,7 @@
             btnexportword.IconColor = Color.White;
             btnexportword.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnexportword.IconSize = 38;
-            btnexportword.Location = new Point(404, 38);
+            btnexportword.Location = new Point(404, 47);
             btnexportword.Name = "btnexportword";
             btnexportword.Size = new Size(69, 67);
             btnexportword.TabIndex = 14;
@@ -101,7 +101,7 @@
             btnexportexcel.IconColor = Color.White;
             btnexportexcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnexportexcel.IconSize = 38;
-            btnexportexcel.Location = new Point(404, 111);
+            btnexportexcel.Location = new Point(404, 120);
             btnexportexcel.Name = "btnexportexcel";
             btnexportexcel.Size = new Size(69, 67);
             btnexportexcel.TabIndex = 15;
@@ -120,7 +120,7 @@
             btnexporttxt.IconColor = Color.White;
             btnexporttxt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnexporttxt.IconSize = 38;
-            btnexporttxt.Location = new Point(404, 184);
+            btnexporttxt.Location = new Point(404, 193);
             btnexporttxt.Name = "btnexporttxt";
             btnexporttxt.Size = new Size(69, 67);
             btnexporttxt.TabIndex = 16;
@@ -151,7 +151,7 @@
             btnexportxml.IconColor = Color.White;
             btnexportxml.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnexportxml.IconSize = 38;
-            btnexportxml.Location = new Point(404, 257);
+            btnexportxml.Location = new Point(404, 266);
             btnexportxml.Name = "btnexportxml";
             btnexportxml.Size = new Size(69, 67);
             btnexportxml.TabIndex = 18;
@@ -167,11 +167,11 @@
             btnexportjson.FlatStyle = FlatStyle.Flat;
             btnexportjson.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnexportjson.ForeColor = Color.Transparent;
-            btnexportjson.IconChar = FontAwesome.Sharp.IconChar.FileText;
+            btnexportjson.IconChar = FontAwesome.Sharp.IconChar.Code;
             btnexportjson.IconColor = Color.White;
             btnexportjson.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnexportjson.IconSize = 38;
-            btnexportjson.Location = new Point(404, 330);
+            btnexportjson.Location = new Point(404, 339);
             btnexportjson.Name = "btnexportjson";
             btnexportjson.Size = new Size(69, 67);
             btnexportjson.TabIndex = 19;

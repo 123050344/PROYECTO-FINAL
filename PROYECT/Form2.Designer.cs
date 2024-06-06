@@ -45,6 +45,9 @@
             txttotalcalories = new TextBox();
             btncalculatecalories = new Button();
             btncreaterecipe = new Button();
+            label2 = new Label();
+            txtnumberingredients = new TextBox();
+            btnaddningredients = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvingredients).BeginInit();
             SuspendLayout();
             // 
@@ -133,7 +136,7 @@
             btnaddrecipe.IconColor = Color.DarkOrange;
             btnaddrecipe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnaddrecipe.IconSize = 40;
-            btnaddrecipe.Location = new Point(274, 66);
+            btnaddrecipe.Location = new Point(292, 366);
             btnaddrecipe.Name = "btnaddrecipe";
             btnaddrecipe.Size = new Size(64, 42);
             btnaddrecipe.TabIndex = 23;
@@ -156,9 +159,9 @@
             // 
             lstrecipes.BackColor = Color.SaddleBrown;
             lstrecipes.BackgroundImage = (Image)resources.GetObject("lstrecipes.BackgroundImage");
-            lstrecipes.Location = new Point(14, 161);
+            lstrecipes.Location = new Point(12, 213);
             lstrecipes.Name = "lstrecipes";
-            lstrecipes.Size = new Size(183, 237);
+            lstrecipes.Size = new Size(274, 195);
             lstrecipes.TabIndex = 26;
             lstrecipes.UseCompatibleStateImageBehavior = false;
             lstrecipes.View = View.List;
@@ -191,7 +194,7 @@
             txttotalcalories.BackColor = Color.PeachPuff;
             txttotalcalories.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txttotalcalories.ForeColor = Color.Black;
-            txttotalcalories.Location = new Point(184, 425);
+            txttotalcalories.Location = new Point(183, 432);
             txttotalcalories.Name = "txttotalcalories";
             txttotalcalories.Size = new Size(212, 29);
             txttotalcalories.TabIndex = 30;
@@ -202,7 +205,7 @@
             btncalculatecalories.FlatStyle = FlatStyle.Popup;
             btncalculatecalories.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btncalculatecalories.ForeColor = Color.PeachPuff;
-            btncalculatecalories.Location = new Point(14, 420);
+            btncalculatecalories.Location = new Point(3, 424);
             btncalculatecalories.Name = "btncalculatecalories";
             btncalculatecalories.Size = new Size(164, 37);
             btncalculatecalories.TabIndex = 32;
@@ -224,12 +227,49 @@
             btncreaterecipe.UseVisualStyleBackColor = false;
             btncreaterecipe.Click += btncreaterecipe_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Peru;
+            label2.Location = new Point(12, 152);
+            label2.Name = "label2";
+            label2.Size = new Size(174, 20);
+            label2.TabIndex = 34;
+            label2.Text = "Number of ingredients:";
+            // 
+            // txtnumberingredients
+            // 
+            txtnumberingredients.BackColor = Color.PeachPuff;
+            txtnumberingredients.Location = new Point(12, 175);
+            txtnumberingredients.Name = "txtnumberingredients";
+            txtnumberingredients.Size = new Size(238, 23);
+            txtnumberingredients.TabIndex = 35;
+            // 
+            // btnaddningredients
+            // 
+            btnaddningredients.BackColor = Color.SaddleBrown;
+            btnaddningredients.FlatStyle = FlatStyle.Popup;
+            btnaddningredients.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnaddningredients.ForeColor = Color.PeachPuff;
+            btnaddningredients.Location = new Point(256, 164);
+            btnaddningredients.Name = "btnaddningredients";
+            btnaddningredients.Size = new Size(53, 34);
+            btnaddningredients.TabIndex = 36;
+            btnaddningredients.Text = "ADD";
+            btnaddningredients.UseVisualStyleBackColor = false;
+            btnaddningredients.Click += btnaddningredients_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(970, 473);
+            Controls.Add(btnaddningredients);
+            Controls.Add(txtnumberingredients);
+            Controls.Add(label2);
             Controls.Add(btncreaterecipe);
             Controls.Add(btncalculatecalories);
             Controls.Add(txttotalcalories);
@@ -272,5 +312,8 @@
         private TextBox txttotalcalories;
         private Button btncalculatecalories;
         private Button btncreaterecipe;
+        private Label label2;
+        private TextBox txtnumberingredients;
+        private Button btnaddningredients;
     }
 }
