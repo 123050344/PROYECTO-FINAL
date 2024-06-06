@@ -206,6 +206,7 @@ namespace PROYECT
         }
 
 
+
         private void dgvIngredients_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             int filledRows = 0;
